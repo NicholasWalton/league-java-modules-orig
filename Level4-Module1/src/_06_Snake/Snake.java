@@ -39,24 +39,8 @@ public class Snake {
 		int nextX = 0;
 		int nextY = 0;
 
-		switch (currentDirection) {
-		case UP: {
-			nextY -= 1;
-			break;
-		}
-		case DOWN: {
-			nextY += 1;
-			break;
-		}
-		case LEFT: {
-			nextX -= 1;
-			break;
-		}
-		case RIGHT: {
-			nextX += 1;
-			break;
-		}
-		}
+		nextX += currentDirection.x;
+		nextY += currentDirection.y;
 
 		//2. Iterate through the SnakeSegments in reverse order
 		//2a. Update each snake segment to the location of the segment 
